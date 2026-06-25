@@ -8,6 +8,9 @@ connectDB();
 const app = experess();
 app.use(cors());
 app.use(experess.json());
+
+app.use('/api/auth',require('./routes/authRoutes'));
+
 app.get('/',(req,res)=>{
     res.json({
         message:"API Runing"

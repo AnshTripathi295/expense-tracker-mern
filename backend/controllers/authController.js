@@ -59,11 +59,11 @@ const loginUser = async (req,res)=>{
         });
         res.status(200).json({
             success:true,
-            user:{
-                _id:user._id,
-                name:user.name,
-                email:user.email
-            },
+            // user:{
+            //     _id:user._id,
+            //     name:user.name,
+            //     email:user.email
+            // },
             token
         });
     }catch(error){

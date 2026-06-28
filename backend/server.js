@@ -10,6 +10,7 @@ app.use(cors());
 app.use(experess.json());
 
 app.use('/api/auth',require('./routes/authRoutes'));
+app.use('/api/transactions',require('./routes/transactionRoutes'));
 
 app.get('/',(req,res)=>{
     res.json({

@@ -14,7 +14,7 @@ const addTransaction = async (req,res)=>{
     res.status(400).json({ message: error.message });
 }};
 const getTransactions = async (req,res)=>{
-    console.log(req.user.id);
+    
     try{
         const transactions = await Transaction.find({user:req.user.id}).sort({date:-1});
         res.status(200).json(transactions);
